@@ -21,12 +21,12 @@ if (bt.options.official)
     bt.run("dotnet test Topten.RichTextKit.Test -c Release");
 
     // Build docs
-    if (!bt.options.nodoc)
-    {
-        bt.run(`docsanity-net5`);
-        bt.run(`git add doc`);
-        bt.run(`git commit --allow-empty -m "Updated documentation"`);
-    }
+    //if (!bt.options.nodoc)
+    //{
+    //    bt.run(`docsanity-net5`);
+    //    bt.run(`git add doc`);
+    //    bt.run(`git commit --allow-empty -m "Updated documentation"`);
+    //}
 
     // Tag and commit
     bt.git_tag();

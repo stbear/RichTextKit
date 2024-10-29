@@ -3,7 +3,12 @@
   <Import Project="../buildtools/Topten.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net462;net5.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48;net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.4.167.1</Version>
+    <Title>RichTextKit</Title>
+    <Description>Fork of RichTextKit with updated dependencies</Description>
+    <RepositoryUrl>https://github.com/stbear/RichTextKit</RepositoryUrl>
   </PropertyGroup>
    
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -20,14 +25,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2.3" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0.2" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="SkiaSharp" Version="2.88.7" />
-    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.7" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.88.7" />
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.8" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
