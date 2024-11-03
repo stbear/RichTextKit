@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="Topten.props" />
+    
+    <PropertyGroup>
+    <TargetFrameworks>net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.4.167.1</Version>
+    <Title>RichTextKit.Stbear</Title>
+    <Description>Fork of RichTextKit with updated dependencies</Description>
+    <RepositoryUrl>https://github.com/stbear/RichTextKit</RepositoryUrl>
+  </PropertyGroup>
+   
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <PackageId>RichTextKit.Stbear</PackageId>
+    <TtsCodeSign>True</TtsCodeSign>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/toptensoftware/richtextkit</PackageProjectUrl>
+    <PackageTags>rich text, rich, text, Skia, SkiaSharp, Font</PackageTags>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageReleaseNotes>updated dependencies for k8s</PackageReleaseNotes>
+    <Description>Easy to use rich text rendering for SkiaSharp, including font-fallback, bi-directional text support and more...</Description>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <RepositoryUrl>https://github.com/stbear/richtextkit</RepositoryUrl>
+  </PropertyGroup>
+   
+  <ItemGroup>
+      <None Include="..\readme.md" Link="readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="7.3.0.2" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.8" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

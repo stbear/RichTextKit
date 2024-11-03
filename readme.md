@@ -1,8 +1,9 @@
-![Banner](./Artwork/banner@2x.png)
-
 # RichTextKit
 
 RichTextKit is a rich-text layout, measurement and rendering library for SkiaSharp.
+
+## Fork
+This is fork with updated dependencies, namely SkiaSharp.NativeAssets.Linux.NoDependencies for k8s deployments.
 
 ## Features
 
@@ -20,13 +21,10 @@ RichTextKit is a rich-text layout, measurement and rendering library for SkiaSha
 * Easy to use
 * Minimal dependencies (just SkiaSharp and HarfBuzzSharp)
 
-![Sandbox](docsrc/sandbox@2x.png)
-
 
 ## Under Development
 
-RichTextKit is still under development.  It works fine on Windows under net462 and 
-net5.0 but hasn't been tested on other platforms.
+RichTextKit is still under development.  It works fine on Windows under net7.0 but hasn't been tested on other platforms.
 
 Also, text layout in general and Unicode and international text specifically are a 
 complicated topics - almost certainly there are issues I'm unaware of and I'm 
