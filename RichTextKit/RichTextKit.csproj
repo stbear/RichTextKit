@@ -4,7 +4,7 @@
     <PropertyGroup>
     <TargetFrameworks>net7.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>0.4.167.1</Version>
+    <Version>0.4.167.2</Version>
     <Title>RichTextKit.Stbear</Title>
     <Description>Fork of RichTextKit with updated dependencies</Description>
     <RepositoryUrl>https://github.com/stbear/RichTextKit</RepositoryUrl>
@@ -24,6 +24,20 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <RepositoryUrl>https://github.com/stbear/richtextkit</RepositoryUrl>
   </PropertyGroup>
+   
+  <ItemGroup>
+    <None Remove="Resources\BidiClasses.trie" />
+    <None Remove="Resources\GraphemeClusterClasses.trie" />
+    <None Remove="Resources\LineBreakClasses.trie" />
+    <None Remove="Resources\WordBoundaryClasses.trie" />
+  </ItemGroup>
+   
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BidiClasses.trie" />
+    <EmbeddedResource Include="Resources\GraphemeClusterClasses.trie" />
+    <EmbeddedResource Include="Resources\LineBreakClasses.trie" />
+    <EmbeddedResource Include="Resources\WordBoundaryClasses.trie" />
+  </ItemGroup>
    
   <ItemGroup>
       <None Include="..\readme.md" Link="readme.md" Pack="true" PackagePath="\" />
